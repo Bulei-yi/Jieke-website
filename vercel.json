@@ -3,10 +3,12 @@
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
     { "src": "assets/**", "use": "@vercel/static" },
+    { "src": "src/assets/**", "use": "@vercel/static" },
     { "src": "vite.svg", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/assets/(.*)", "dest": "/assets/$1" },
+    { "src": "/src/assets/(.*)", "dest": "/src/assets/$1" },
     { "src": "/vite.svg", "dest": "/vite.svg" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
